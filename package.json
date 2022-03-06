@@ -1,0 +1,35 @@
+{
+  "type": "module",
+  "name": "NodeJS",
+  "version": "1.0.0",
+  "description": "Mid level challenge",
+  "main": "app.js",
+  "author": "talatatac@gmail.com",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.5.0",
+    "husky": "^7.0.0",
+    "lint-staged": "^12.3.4",
+    "nodemon": "^2.0.15",
+    "prettier": "2.5.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3"
+  },
+  "scripts": {
+    "start": "nodemon src/app.js --trace-warnings",
+    "prettier": "prettier --write .",
+    "eslint": "eslint src",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  }
+}
